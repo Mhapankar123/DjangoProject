@@ -3,3 +3,4 @@ This is an django project where a user can add eventname, it's descritpion, loca
 
 # Screenshots
 ![](media/images/SS1.JPG)
+![](media/images/SS2.JPG)
