@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Hotel Images</title>
+    <title>Event Display</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS only -->
@@ -11,20 +11,29 @@
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-image: linear-gradient(to right,#7F7FD5,#86A8E7,#91EAE4);">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand mx-4" href="#">Django Project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+<!--Main Body-->
 <div class="container-fluid" style="height:10vh; width: 100%">
     <div class="container">
+        <h2 class="m-3" style="font-weight: bolder;">Likes</h2>
         <div class="row">
             {% for imgs in d_images %}
-            <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="col-sm-12 col-md-4 col-lg-4 my-3">
                 <img src="{{ imgs.image.url }}" class="img-responsive"
                     style="width: 300px;height: 200px; float: left; margin-right: 10px;" />
             </div>
-            <div class="col-sm-12 col-md-8 col-lg-8">
-                <h4>{{ imgs.eventname }}</h4>
-                <h4>{{ imgs.desc }}</h4>
-                <h4>{{ imgs.location }}</h4>
-                <h4>{{ imgs.time }}</h4>
+            <div class="col-sm-12 col-md-8 col-lg-8 my-3">
+                <h5>{{ imgs.eventname }}</h5>
+                <h5>{{ imgs.desc }}</h5>
+                <h5>{{ imgs.location }}</h5>
+                <h5>{{ imgs.time }}</h5>
             </div>
             {% endfor %}
         </div>
